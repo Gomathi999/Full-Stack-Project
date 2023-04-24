@@ -1,0 +1,19 @@
+/* Style for content of d-flext */
+.d-flex{
+    justify-content: center;
+    margin-top: 3%;
+}
+/* Style for card */
+.card-body{
+    height: 250px;
+}
+.card-title{
+    text-align: center;
+}
+/* Styling the buttons */
+.btn{
+    background-color: rgb(43, 226, 67);   
+}
+.back{
+    margin-left: 48%;
+}

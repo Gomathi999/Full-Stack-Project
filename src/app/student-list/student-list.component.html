@@ -1,0 +1,98 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="firstName" placeholder="Search by Student Name" [(ngModel)] = "firstName" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary search" (click)="searchByName()">
+                    Search
+                </button>
+                
+            </div>
+            
+        </div>
+        
+     </div>
+    
+ 
+<div class="grade">
+    <form>
+        <label id="filter">Filter By Grade</label>
+        &nbsp; &nbsp;
+    </form>
+    <select (change)="fetchStudentByStandard($event)" name="gradeValue" [(ngModel)]="gradeValue" id="dropdown">
+        <option value="0" selected disabled>Select Grade</option>
+        <option value="6" default>Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+        <option value="10">Grade 10</option>
+        <option value="11">Grade 11</option>
+        <option value="12">Grade 12</option>
+    </select>
+</div>
+</div><br>
+
+<h2 class="heading">Student List</h2>
+<div class="table-responsive text-nowrap">
+<table class = "table table-striped" width="200%">
+    <thead>
+        <tr>
+            <th><b> Student Name </b></th>
+            <th><b> Standard </b></th>
+            <th><b> Contact </b></th>
+            <th><b> City </b></th>
+            <th><b> Gender </b></th>
+            <th><b> DOB </b></th>
+            <th><b> Email Id </b></th>
+            <th><b> Actions </b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students" >
+            <td> {{ student.studentName }} </td>
+            <td> {{ student.standard }} </td>
+            <td> {{ student.contactNo }} </td>
+            <td> {{ student.city }} </td>
+            <td> {{ student.gender }} </td>
+            <td> {{ student.dateOfBirth }} </td>
+            <td> {{ student.email }} </td>
+            <td>
+                <button (click) = "confirmUpdate(student)" class = "btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Update Student Record"> 
+                    <i class="fa-sharp fa-solid fa-pen-to-square fa-beat"></i></button>
+                <button (click) = "confirmDelete(student)" class = "btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Student Record" style="margin-left: 10px"> 
+                    <i class="fa-solid fa-trash fa-beat"></i></button>
+                <button (click) ="viewCourse(student)" class = "btn btn-info" data-toggle="tooltip" data-placement="bottom" title="View Course Details" style="margin-left: 10px"> 
+                    <i class="fa-sharp fa-solid fa-book fa-beat"></i></button>    
+                <button (click) = "studentDetails(student.studentId)" class = "btn btn-info" data-toggle="tooltip" data-placement="bottom" title="View Student Detail" style="margin-left: 10px"> 
+                    <i class="fa-sharp fa-solid fa-eye fa-beat"></i></button>
+            </td>
+        </tr>
+        
+        <tr scope="row" *ngIf="students.length === 0">
+            <td colspan="4" class="text-center"> No Record Found !!</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- <div  *ngIf="(students.length !== 0)">
+    <div class="remove" >
+        <button class="btn btn-danger" (click)="removeAllStudents()" data-toggle="tooltip" data-placement="bottom" title="Delete All Students" style="margin-left: 10px">
+            Remove All Students </button>
+    </div>
+    <div class="back">
+        <a href="students" class="btn btn-secondary">Back</a>    
+    </div>
+</div> -->
+<div  >
+    <div class="remove" *ngIf="(students.length !== 0)">
+        <button class="btn btn-danger" (click)="removeAllStudents()" data-toggle="tooltip" data-placement="bottom" title="Delete All Students" style="margin-left: 10px">
+            Remove All Students </button>
+    </div>
+    <div *ngIf="(students.length === 0)">
+        <p></p>
+    </div >
+    <div class="back">
+        <a href="students" class="btn btn-secondary">Back</a>    
+    </div>
+</div>
+

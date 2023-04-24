@@ -1,0 +1,25 @@
+<!-- Create a form for login page -->
+<section class="container mt-5">
+    <div class="row justify-content-md-center">
+        <div class="pic">
+            <i class="fas fa-user"></i>
+        </div>
+        <h2 class="title">Login</h2>
+        <form class="form">
+            <label for="email">Email</label>
+            <input type="email" name="email"  id="email" class="input"  placeholder="&#xf0e0; Email" autocomplete="off" minlength="15"  required="required" [(ngModel)]="email">
+            
+            <label for="password">Password</label>
+             <input [type]="changetype?'password':'text'" name="password" class="input"  placeholder="&#xf084; password" id="Password" autocomplete="off" minlength="3" maxlength="15" required="required" [(ngModel)]="password">
+             <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye'  : 'fa fa-eye-slash'"></i></span>
+             
+            <p class="error">{{emessage}}</p> 
+            <button (click)=checkLogin() type="button" class="btn btn-login btn-rounded w-100">Login</button>
+            <br>
+            <p class="sign-up">Don't have an account? <a href="signup">Sign up</a></p>
+            
+        </form>
+        
+    </div>
+</section>
+

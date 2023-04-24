@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="content">
+    <!-- Define the left side of the container-->
+    <div class="left-side">
+      <div class="address details">
+        <img [src] ="'/assets/image/addressImg.jpg'" style="width: 35px;height: 40px;">
+        <div class="topic"><b>Address</b></div>
+        <div class="text-one">2nd street, kamaraj nagar,</div>
+        <div class="text-two">Adayar</div>
+      </div>
+      <div class="phone details">
+        <img [src] ="'/assets/image/phoneImg1.jpg'" style="width: 35px;height: 40px;">
+        <div class="topic"><b>Phone</b></div>
+        <div class="text-one">9898935647</div>
+        <div class="text-two">9634345678</div>
+      </div>
+      <div class="email details">
+        <img [src] ="'/assets/image/mailImage.jpg'" style="width: 35px;height: 40px;">
+        <div class="topic"><b>Email</b></div>
+        <div class="text-one">elearning@gmail.com</div>
+        <div class="text-two">info.elearning@gmail.com</div>
+      </div>
+    </div>
+    <!-- Define the right side of the container-->
+    <div class="right-side">
+      <div class="topic-text">Contact Us</div><br>
+      <p>If you have any types of queries, you can connect with us. We will quickly resolve your issues. 
+           otherwise you can send ur details, we will connect with you as soon as possible. It's our pleasure to help you.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" inputmode="text" [(ngModel)]="name" name="name" placeholder="Enter your name"  autocomplete="off" minlength="3" maxlength="20" required="required" />
+        </div>
+        <div class="input-box">
+          <input type="email"  inputmode="email" [(ngModel)]="email" name="email" placeholder="Enter your email" autocomplete="off" minlength="15" required="required"/>
+        </div>
+        <div class="input-box">
+          <input type="text" inputmode="numeric" [(ngModel)]="contact" name="contact"  autocomplete="off" placeholder="Enter your number" maxlength="10" required="required"/>
+        </div>
+        <div class="button">
+          <a class="btn " (click)="sentContactMessage()">Send Now</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

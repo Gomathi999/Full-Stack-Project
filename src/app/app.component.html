@@ -1,0 +1,22 @@
+<a href="#" class="logo"><img [src] ="'/assets/image/eLearning1.jpg'" style="width: 60px;height: 50px;"></a>
+<span class="text-left heading" style = "color:rgb(20, 20, 20);"> {{title}} </span>
+
+<div class="topnav">
+  <a class="btn btn-2" data-toggle="tooltip" data-placement="bottom" title="Home" routerLink="home-page"><i class="fa-solid fa-house"></i>Home</a>
+  <a class="btn btn-2" data-toggle="tooltip" data-placement="bottom" title="About Us" routerLink="about"><i class="fa-solid fa-address-card"></i>About Us</a>
+  <a class="btn btn-2" data-toggle="tooltip" data-placement="bottom" title="Profile" routerLink="profile-card"><i class="fa-solid fa-user"></i>Profile</a>
+  <a class="btn btn-2" data-toggle="tooltip" data-placement="bottom" title="Contact Us" routerLink="contact-info"><i class="fa-solid fa-square-phone"></i>Contact Us</a>
+  <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Student List" routerLink="students"><i class="fa-solid fa-list"></i>Student List</a>
+  <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Add Student" routerLink="create-student"><i class="fa-sharp fa-solid fa-user-plus"></i>Add Student</a>
+  <div class="topnav-right">
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Sign Up" routerLink="signup">Sign Up</a> 
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Login" routerLink="login">Login</a>
+    <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Feedback" routerLink="feedback-page"><i class="fa-solid fa-comment-dots"></i>Feedback</a>
+    <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" data-toggle="tooltip" data-placement="bottom" title="Logout"  (click)="confirmLogout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+  </div>
+</div>
+
+
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>

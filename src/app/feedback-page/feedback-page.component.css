@@ -1,0 +1,67 @@
+/* Style the body of the content */
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #DAE2F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Styling the heading and form content section */
+.h1-tag{
+    margin-left: 4%;
+    margin-top: 2%;
+    color: #861dbb;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+    background: #FFF;
+	padding: 40px;
+	border-radius: 20px;
+	position: relative;
+	top: 50%;
+    left: 30%;
+    background-color: rgb(0, 255, 234);
+}
+/* Style for check the height, width, resolution, and orientation(Portrait/Landscape) of the device */
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+/* Styling the button */
+.btn{
+    padding: 12px 20px;
+    background: #7F00FF;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all .3s ease-in;
+    margin-left: 35%;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background: transparent;
+    color: #7F00FF;
+    border: 2px solid #7F00FF;
+}
+
+
+.myclass{
+    border-radius: 20px;
+}

@@ -1,0 +1,56 @@
+/* Style for heading */
+.heading{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    background-color: violet;
+    display: inline-flex;
+    margin-left: 43%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Styling the table and rows*/
+tr{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+table{
+    background-color: rgb(133, 126, 233);  
+}
+tr:hover{
+    background-color: yellowgreen;
+}
+/* Styling the button */
+button:hover{
+    background-color: rgb(205, 50, 128);
+}
+.fa-book{
+    color: white;
+}
+.list .input-group {
+    right: auto;
+    margin-top: 3%;
+    height: 7%;
+}
+.list .search{
+    color: black;
+    background-color: rgb(205, 50, 128);
+}
+.list .grade{
+   width: 20%;
+   margin-top: 2%;   
+}
+.back  {
+   margin-top: -3.3%;
+   margin-left: 60%;
+}
+/* Style the button */
+.btn .btn-secondary:hover{
+    background-color: rgb(205, 50, 128);
+}
+.remove{
+    margin-left: 40%;
+    margin-top: 2%;
+}

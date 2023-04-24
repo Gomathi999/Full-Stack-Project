@@ -1,0 +1,11 @@
+
+.heading{
+    text-align: center;
+    font-size: 400%;
+    margin-top: 10%;
+    height: 310px;
+    width: 720px;
+    margin-left: 20%;
+    color: rgb(22, 7, 245);
+    background: linear-gradient(to right, #dbce15, #e6af18);   
+}

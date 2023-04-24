@@ -1,0 +1,25 @@
+<!-- Create a form for giving feedback -->
+<section id="form-section">
+    <form class="form-content-section">
+        <h3 class="h1-tag">Your Feedback Is Important For Us</h3><br>
+        <div class="form-group">
+            <label for="exampleInputText"><b>Name</b></label>
+            <input type="text" class="form-control" id="exampleInputText" [(ngModel)]="name" name="name" placeholder="Enter Your Name" autocomplete="off" minlength="3" maxlength="20" required />
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><b>Email address</b></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="email" name="email" placeholder="Enter your email" autocomplete="off" minlength="15" required="required"/>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText"><b>Contact Number</b></label>
+            <input type="text" class="form-control" id="exampleInputText" [(ngModel)]="contact" name="contact" placeholder="Enter your contact number" autocomplete="off" maxlength="10" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"><b>Send your message</b></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="message" name="message" placeholder="Type Here..." rows="3" required="required"></textarea>
+        </div>
+        <a class="btn" (click)="sentFeedbackMessage()">Post Comment</a>
+    </form>
+</section>
+
